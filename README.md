@@ -1,100 +1,72 @@
-### Speculum Principum
+# Denver Broncos Research Project
 
-`main.py` exposes a single CLI entry point that helps you triage GitHub work and
-convert source documents into Markdown artifacts. All commands follow the
-pattern `python -m main <command> [options]`.
+This repository tracks and analyzes information about the Denver Broncos organization, including players, management, and sponsor relationships.
 
-## GitHub workflow tooling
+## Research Goals
 
-- **Create issues** – Render a Markdown template (or literal body) and open an
-	issue via the REST API:
+- **Source**: [Denver Broncos Official Website](https://www.denverbroncos.com)
+- **Topic**: Players, management and sponsor mapping
+- **Update Frequency**: Weekly
+- **LLM Model**: gpt-4o
 
-	```bash
-	python -m main --title "Bug report" --template .github/ISSUE_TEMPLATE/general.md --var env=prod
-	```
+## Overview
 
-	Key flags: `--repo`, `--token`, `--body` (bypass template), repeatable
-	`--var`, `--label`, and `--assignee`, plus `--output` for text, JSON, or
-	number-only responses, and `--dry-run` to preview without creating.
+This project systematically collects, parses, and analyzes data from the Denver Broncos official website to build a comprehensive knowledge graph of:
 
-- **Search issues** – List issues by assignee or label to feed your triage
-	queue:
+- **Players**: Current roster, statistics, and profiles
+- **Management**: Coaching staff, executives, and organizational structure
+- **Sponsors**: Partnership and sponsorship relationships
 
-	```bash
-	python -m main search --label ready-for-copilot --limit 10 --output text
-	```
+## Getting Started
 
-	If `--label` is omitted the search lists issues assigned to the provided
-	`--assignee` (or unassigned when omitted).
+### Prerequisites
 
-- **Run the local Copilot agent** – Claim the next `ready-for-copilot` issue and
-	hand it to the Copilot CLI, optionally customizing the model, extra CLI flags,
-	and allowed tools:
+- Python 3.8+
+- GitHub Personal Access Token (for automated workflows)
 
-	```bash
-	python -m main run-agent --copilot-model claude-haiku-4.5 --copilot-arg verbose
-	```
-
-	Helpful flags include `--label`, `--base`, `--instructions`, tool overrides
-	via `--copilot-allow-tool` or `--copilot-no-default-tools`, and workflow
-	toggles such as `--skip-push`, `--skip-pr`, `--draft`, and `--keep-label`.
-
-## Document parsing
-
-`python -m main parse` converts supported documents into Markdown stored under a
-manifest-managed output directory. Configuration defaults come from
-`config/parsing.yaml` when present, and can be overridden per run.
-
-Common options:
-
-- `--output-root PATH` – override the configured artifact directory.
-- `--config PATH` – point to an alternate YAML configuration.
-- `--force` – reprocess inputs even when an identical checksum was already
-	parsed.
-
-Subcommands target specific sources:
-
-- `pdf PATH...` – parse one or more PDF files.
-- `docx PATH...` – parse one or more DOCX files.
-- `web SOURCE...` – ingest HTTP(S) URLs or local HTML files.
-- `scan` – walk a directory (default `./evidence`) and process matching files.
-
-`scan` accepts filters such as `--suffix .pdf`, `--include`/`--exclude` glob
-patterns, `--recursive/--no-recursive`, `--limit`, and `--clear-config-*`
-switches to ignore patterns defined in the YAML configuration.
-
-Each parsing run streams status lines to stdout indicating the parser, output
-artifact path, and warnings. Non-zero exit codes signal at least one failed
-parse.
-
-## Using as a Template
-
-This repository is designed to be used as a **template** for research projects. Clone it to create topic-specific research repositories that can receive code updates from this base.
-
-### Quick Start
-
-1. Click **"Use this template"** on GitHub to create your research repository
-2. Run the **Initialize Repository** workflow to configure your research topic
-3. Add research materials to `evidence/`, build knowledge in `knowledge-graph/`
-
-### Syncing with Upstream
-
-Cloned repositories can receive code updates (bug fixes, new features) while preserving research content:
+### Installation
 
 ```bash
-# Via GitHub Actions UI:
-# Go to Actions → Sync from Upstream → Run workflow
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-**What gets synced:**
-- Code: `src/`, `tests/`, `.github/`, `config/missions/`, `docs/`
-- Root files: `main.py`, `requirements.txt`, `pytest.ini`
+### Usage
 
-**What stays local:**
-- Research: `evidence/`, `knowledge-graph/`, `reports/`, `dev_data/`
+The `main.py` CLI provides tools for document parsing, entity extraction, and workflow automation:
 
-The sync creates a Pull Request for review. See [docs/guides/upstream-sync.md](docs/guides/upstream-sync.md) for detailed setup and usage instructions.
+```bash
+# Parse web content from the source
+python -m main parse web https://www.denverbroncos.com
 
-## Information Architecture
+# Scan and process evidence directory
+python -m main parse scan --recursive
 
-Coming soon...
+# Run agent workflows
+python -m main run-agent
+```
+
+## Project Structure
+
+- **`evidence/`**: Source documents and raw data
+- **`knowledge-graph/`**: Extracted entities and relationships
+- **`reports/`**: Analysis reports and summaries
+- **`dev_data/`**: Development and testing artifacts
+- **`config/manifest.json`**: Project configuration
+
+## Workflows
+
+This repository uses automated GitHub Actions workflows to:
+
+- Monitor the Denver Broncos website for updates (weekly)
+- Parse new content into structured data
+- Extract entities and build the knowledge graph
+- Generate reports and summaries
+
+## Contributing
+
+This is a research repository. Updates are primarily automated through the configured workflows. Manual contributions to enhance analysis or fix data quality issues are welcome.
+
+## License
+
+Research data is collected from public sources. See individual source citations for usage rights.
