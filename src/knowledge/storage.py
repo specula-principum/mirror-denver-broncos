@@ -1,0 +1,586 @@
+"""Storage for knowledge graph entities."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, List
+
+from src import paths
+from src.parsing import utils
+
+_DEFAULT_KB_ROOT = paths.get_knowledge_graph_root()
+
+
+@dataclass(slots=True)
+class ExtractedPeople:
+    """List of people extracted from a source document."""
+    
+    source_checksum: str
+    people: List[str]
+    extracted_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "source_checksum": self.source_checksum,
+            "people": self.people,
+            "extracted_at": self.extracted_at.isoformat(),
+            "metadata": self.metadata,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "ExtractedPeople":
+        extracted_at = datetime.fromisoformat(payload["extracted_at"])
+        return cls(
+            source_checksum=payload["source_checksum"],
+            people=payload["people"],
+            extracted_at=extracted_at,
+            metadata=payload.get("metadata", {}),
+        )
+
+
+
+@dataclass(slots=True)
+class ExtractedOrganizations:
+    """List of organizations extracted from a source document."""
+    
+    source_checksum: str
+    organizations: List[str]
+    extracted_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "source_checksum": self.source_checksum,
+            "organizations": self.organizations,
+            "extracted_at": self.extracted_at.isoformat(),
+            "metadata": self.metadata,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "ExtractedOrganizations":
+        extracted_at = datetime.fromisoformat(payload["extracted_at"])
+        return cls(
+            source_checksum=payload["source_checksum"],
+            organizations=payload["organizations"],
+            extracted_at=extracted_at,
+            metadata=payload.get("metadata", {}),
+        )
+
+
+@dataclass(slots=True)
+class ExtractedConcepts:
+    """List of concepts extracted from a source document."""
+    
+    source_checksum: str
+    concepts: List[str]
+    extracted_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "source_checksum": self.source_checksum,
+            "concepts": self.concepts,
+            "extracted_at": self.extracted_at.isoformat(),
+            "metadata": self.metadata,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "ExtractedConcepts":
+        extracted_at = datetime.fromisoformat(payload["extracted_at"])
+        return cls(
+            source_checksum=payload["source_checksum"],
+            concepts=payload["concepts"],
+            extracted_at=extracted_at,
+            metadata=payload.get("metadata", {}),
+        )
+
+
+@dataclass(slots=True)
+class EntityAssociation:
+    """Represents an association between two entities."""
+    
+    source: str
+    target: str
+    relationship: str
+    evidence: str
+    source_type: str = "Unknown"
+    target_type: str = "Unknown"
+    confidence: float = 1.0
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "source": self.source,
+            "target": self.target,
+            "relationship": self.relationship,
+            "evidence": self.evidence,
+            "source_type": self.source_type,
+            "target_type": self.target_type,
+            "confidence": self.confidence,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "EntityAssociation":
+        return cls(
+            source=payload["source"],
+            target=payload["target"],
+            relationship=payload["relationship"],
+            evidence=payload.get("evidence", ""),
+            source_type=payload.get("source_type", "Unknown"),
+            target_type=payload.get("target_type", "Unknown"),
+            confidence=payload.get("confidence", 1.0),
+        )
+
+
+@dataclass(slots=True)
+class ExtractedAssociations:
+    """List of associations extracted from a source document."""
+    
+    source_checksum: str
+    associations: List[EntityAssociation]
+    extracted_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "source_checksum": self.source_checksum,
+            "associations": [a.to_dict() for a in self.associations],
+            "extracted_at": self.extracted_at.isoformat(),
+            "metadata": self.metadata,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "ExtractedAssociations":
+        extracted_at = datetime.fromisoformat(payload["extracted_at"])
+        return cls(
+            source_checksum=payload["source_checksum"],
+            associations=[EntityAssociation.from_dict(a) for a in payload["associations"]],
+            extracted_at=extracted_at,
+            metadata=payload.get("metadata", {}),
+        )
+
+
+class KnowledgeGraphStorage:
+    """Manages storage of extracted knowledge graph entities."""
+
+    def __init__(self, root: Path | None = None) -> None:
+        self.root = root or _DEFAULT_KB_ROOT
+        self.root = self.root if self.root.is_absolute() else self.root.resolve()
+        utils.ensure_directory(self.root)
+        self._people_dir = self.root / "people"
+        utils.ensure_directory(self._people_dir)
+        self._organizations_dir = self.root / "organizations"
+        utils.ensure_directory(self._organizations_dir)
+        self._concepts_dir = self.root / "concepts"
+        utils.ensure_directory(self._concepts_dir)
+        self._associations_dir = self.root / "associations"
+        utils.ensure_directory(self._associations_dir)
+        self._profiles_dir = self.root / "profiles"
+        utils.ensure_directory(self._profiles_dir)
+
+    def save_extracted_people(self, source_checksum: str, people: List[str]) -> None:
+        """Save extracted people for a given source document."""
+        entry = ExtractedPeople(source_checksum=source_checksum, people=people)
+        path = self._get_people_path(source_checksum)
+        
+        # Write atomic
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(json.dumps(entry.to_dict(), indent=2), encoding="utf-8")
+        tmp_path.replace(path)
+
+    def get_extracted_people(self, source_checksum: str) -> ExtractedPeople | None:
+        """Retrieve extracted people for a given source document."""
+        path = self._get_people_path(source_checksum)
+        if not path.exists():
+            return None
+        
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return ExtractedPeople.from_dict(data)
+        except (json.JSONDecodeError, KeyError):
+            return None
+
+    def save_extracted_organizations(self, source_checksum: str, organizations: List[str]) -> None:
+        """Save extracted organizations for a given source document."""
+        entry = ExtractedOrganizations(source_checksum=source_checksum, organizations=organizations)
+        path = self._get_organizations_path(source_checksum)
+        
+        # Write atomic
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(json.dumps(entry.to_dict(), indent=2), encoding="utf-8")
+        tmp_path.replace(path)
+
+    def get_extracted_organizations(self, source_checksum: str) -> ExtractedOrganizations | None:
+        """Retrieve extracted organizations for a given source document."""
+        path = self._get_organizations_path(source_checksum)
+        if not path.exists():
+            return None
+        
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return ExtractedOrganizations.from_dict(data)
+        except (json.JSONDecodeError, KeyError):
+            return None
+
+    def save_extracted_concepts(self, source_checksum: str, concepts: List[str]) -> None:
+        """Save extracted concepts for a given source document."""
+        entry = ExtractedConcepts(source_checksum=source_checksum, concepts=concepts)
+        path = self._get_concepts_path(source_checksum)
+        
+        # Write atomic
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(json.dumps(entry.to_dict(), indent=2), encoding="utf-8")
+        tmp_path.replace(path)
+
+    def get_extracted_concepts(self, source_checksum: str) -> ExtractedConcepts | None:
+        """Retrieve extracted concepts for a given source document."""
+        path = self._get_concepts_path(source_checksum)
+        if not path.exists():
+            return None
+        
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return ExtractedConcepts.from_dict(data)
+        except (json.JSONDecodeError, KeyError):
+            return None
+
+    def save_extracted_associations(self, source_checksum: str, associations: List[EntityAssociation]) -> None:
+        """Save extracted associations for a given source document."""
+        entry = ExtractedAssociations(source_checksum=source_checksum, associations=associations)
+        path = self._get_associations_path(source_checksum)
+        
+        # Write atomic
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(json.dumps(entry.to_dict(), indent=2), encoding="utf-8")
+        tmp_path.replace(path)
+
+    def get_extracted_associations(self, source_checksum: str) -> ExtractedAssociations | None:
+        """Retrieve extracted associations for a given source document."""
+        path = self._get_associations_path(source_checksum)
+        if not path.exists():
+            return None
+        
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return ExtractedAssociations.from_dict(data)
+        except (json.JSONDecodeError, KeyError):
+            return None
+
+    def save_extracted_profiles(self, source_checksum: str, profiles: List[EntityProfile]) -> None:
+        """Save extracted profiles for a given source document."""
+        entry = ExtractedProfiles(source_checksum=source_checksum, profiles=profiles)
+        path = self._get_profiles_path(source_checksum)
+        
+        # Write atomic
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(json.dumps(entry.to_dict(), indent=2), encoding="utf-8")
+        tmp_path.replace(path)
+
+    def get_extracted_profiles(self, source_checksum: str) -> ExtractedProfiles | None:
+        """Retrieve extracted profiles for a given source document."""
+        path = self._get_profiles_path(source_checksum)
+        if not path.exists():
+            return None
+        
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return ExtractedProfiles.from_dict(data)
+        except (json.JSONDecodeError, KeyError):
+            return None
+
+    def _get_people_path(self, checksum: str) -> Path:
+        """Get the path for the people file corresponding to a checksum."""
+        # Use a sharded structure if needed, but flat is fine for now
+        return self._people_dir / f"{checksum}.json"
+
+    def _get_organizations_path(self, checksum: str) -> Path:
+        """Get the path for the organizations file corresponding to a checksum."""
+        return self._organizations_dir / f"{checksum}.json"
+
+    def _get_concepts_path(self, checksum: str) -> Path:
+        """Get the path for the concepts file corresponding to a checksum."""
+        return self._concepts_dir / f"{checksum}.json"
+
+    def _get_associations_path(self, checksum: str) -> Path:
+        """Get the path for the associations file corresponding to a checksum."""
+        return self._associations_dir / f"{checksum}.json"
+
+    def _get_profiles_path(self, checksum: str) -> Path:
+        """Get the path for the profiles file corresponding to a checksum."""
+        return self._profiles_dir / f"{checksum}.json"
+
+
+@dataclass(slots=True)
+class EntityProfile:
+    """Detailed profile of an entity."""
+    
+    name: str
+    entity_type: str  # Person, Organization, Concept
+    summary: str
+    attributes: dict[str, Any] = field(default_factory=dict)
+    mentions: List[str] = field(default_factory=list)
+    confidence: float = 1.0
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "name": self.name,
+            "entity_type": self.entity_type,
+            "summary": self.summary,
+            "attributes": self.attributes,
+            "mentions": self.mentions,
+            "confidence": self.confidence,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "EntityProfile":
+        return cls(
+            name=payload["name"],
+            entity_type=payload["entity_type"],
+            summary=payload["summary"],
+            attributes=payload.get("attributes", {}),
+            mentions=payload.get("mentions", []),
+            confidence=payload.get("confidence", 1.0),
+        )
+
+
+@dataclass(slots=True)
+class ExtractedProfiles:
+    """List of entity profiles extracted from a source document."""
+    
+    source_checksum: str
+    profiles: List[EntityProfile]
+    extracted_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "source_checksum": self.source_checksum,
+            "profiles": [p.to_dict() for p in self.profiles],
+            "extracted_at": self.extracted_at.isoformat(),
+            "metadata": self.metadata,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "ExtractedProfiles":
+        extracted_at = datetime.fromisoformat(payload["extracted_at"])
+        return cls(
+            source_checksum=payload["source_checksum"],
+            profiles=[EntityProfile.from_dict(p) for p in payload["profiles"]],
+            extracted_at=extracted_at,
+            metadata=payload.get("metadata", {}),
+        )
+
+
+# =============================================================================
+# Source Registry
+# =============================================================================
+
+
+def _url_hash(url: str) -> str:
+    """Generate a consistent hash for a URL to use as filename."""
+    return hashlib.sha256(url.encode("utf-8")).hexdigest()[:16]
+
+
+@dataclass(slots=True)
+class SourceEntry:
+    """Represents an authoritative source in the registry."""
+
+    url: str  # Canonical URL
+    name: str  # Human-readable name
+    source_type: str  # "primary" | "derived" | "reference"
+    status: str  # "active" | "deprecated" | "pending_review"
+    last_verified: datetime  # Last successful access check
+    added_at: datetime  # When source was registered
+    added_by: str  # GitHub username or "system"
+    approval_issue: int | None  # Issue number that approved this source
+
+    # Credibility metadata
+    credibility_score: float  # 0.0-1.0, based on evaluation
+    is_official: bool  # Official/authoritative domain
+    requires_auth: bool  # Requires authentication to access
+
+    # Discovery metadata
+    discovered_from: str | None  # Checksum of document where discovered
+    parent_source_url: str | None  # URL of source that referenced this
+
+    # Content metadata
+    content_type: str  # "webpage" | "pdf" | "api" | "feed"
+    update_frequency: str | None  # "daily" | "weekly" | "monthly" | "unknown"
+    topics: List[str] = field(default_factory=list)
+    notes: str = ""
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "url": self.url,
+            "name": self.name,
+            "source_type": self.source_type,
+            "status": self.status,
+            "last_verified": self.last_verified.isoformat(),
+            "added_at": self.added_at.isoformat(),
+            "added_by": self.added_by,
+            "approval_issue": self.approval_issue,
+            "credibility_score": self.credibility_score,
+            "is_official": self.is_official,
+            "requires_auth": self.requires_auth,
+            "discovered_from": self.discovered_from,
+            "parent_source_url": self.parent_source_url,
+            "content_type": self.content_type,
+            "update_frequency": self.update_frequency,
+            "topics": self.topics,
+            "notes": self.notes,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: dict[str, Any]) -> "SourceEntry":
+        return cls(
+            url=payload["url"],
+            name=payload["name"],
+            source_type=payload["source_type"],
+            status=payload["status"],
+            last_verified=datetime.fromisoformat(payload["last_verified"]),
+            added_at=datetime.fromisoformat(payload["added_at"]),
+            added_by=payload["added_by"],
+            approval_issue=payload.get("approval_issue"),
+            credibility_score=payload.get("credibility_score", 0.0),
+            is_official=payload.get("is_official", False),
+            requires_auth=payload.get("requires_auth", False),
+            discovered_from=payload.get("discovered_from"),
+            parent_source_url=payload.get("parent_source_url"),
+            content_type=payload.get("content_type", "webpage"),
+            update_frequency=payload.get("update_frequency"),
+            topics=payload.get("topics", []),
+            notes=payload.get("notes", ""),
+        )
+
+    @property
+    def url_hash(self) -> str:
+        """Return the hash used for storage filename."""
+        return _url_hash(self.url)
+
+
+class SourceRegistry:
+    """Manages storage of authoritative sources."""
+
+    def __init__(self, root: Path | None = None) -> None:
+        self.root = root or _DEFAULT_KB_ROOT
+        self.root = self.root if self.root.is_absolute() else self.root.resolve()
+        utils.ensure_directory(self.root)
+        self._sources_dir = self.root / "sources"
+        utils.ensure_directory(self._sources_dir)
+        self._registry_path = self._sources_dir / "registry.json"
+
+    def _get_source_path(self, url: str) -> Path:
+        """Get the path for an individual source entry."""
+        return self._sources_dir / f"{_url_hash(url)}.json"
+
+    def _load_registry_index(self) -> dict[str, str]:
+        """Load the registry index mapping URL hashes to URLs."""
+        if not self._registry_path.exists():
+            return {}
+        try:
+            data = json.loads(self._registry_path.read_text(encoding="utf-8"))
+            return data.get("sources", {})
+        except (json.JSONDecodeError, KeyError):
+            return {}
+
+    def _save_registry_index(self, index: dict[str, str]) -> None:
+        """Save the registry index."""
+        data = {
+            "version": 1,
+            "updated_at": datetime.now(timezone.utc).isoformat(),
+            "sources": index,
+        }
+        tmp_path = self._registry_path.with_suffix(".json.tmp")
+        tmp_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        tmp_path.replace(self._registry_path)
+
+    def save_source(self, source: SourceEntry) -> None:
+        """Save a source entry to storage."""
+        path = self._get_source_path(source.url)
+
+        # Write atomic
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(json.dumps(source.to_dict(), indent=2), encoding="utf-8")
+        tmp_path.replace(path)
+
+        # Update registry index
+        index = self._load_registry_index()
+        index[source.url_hash] = source.url
+        self._save_registry_index(index)
+
+    def get_source(self, url: str) -> SourceEntry | None:
+        """Retrieve a source entry by URL."""
+        path = self._get_source_path(url)
+        if not path.exists():
+            return None
+
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return SourceEntry.from_dict(data)
+        except (json.JSONDecodeError, KeyError):
+            return None
+
+    def get_source_by_hash(self, url_hash: str) -> SourceEntry | None:
+        """Retrieve a source entry by its URL hash."""
+        path = self._sources_dir / f"{url_hash}.json"
+        if not path.exists():
+            return None
+
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return SourceEntry.from_dict(data)
+        except (json.JSONDecodeError, KeyError):
+            return None
+
+    def list_sources(
+        self,
+        status: str | None = None,
+        source_type: str | None = None,
+    ) -> List[SourceEntry]:
+        """List all sources, optionally filtered by status or type."""
+        sources: List[SourceEntry] = []
+        index = self._load_registry_index()
+
+        for url_hash in index:
+            source = self.get_source_by_hash(url_hash)
+            if source is None:
+                continue
+            if status is not None and source.status != status:
+                continue
+            if source_type is not None and source.source_type != source_type:
+                continue
+            sources.append(source)
+
+        return sources
+
+    def delete_source(self, url: str) -> bool:
+        """Delete a source entry. Returns True if deleted, False if not found."""
+        path = self._get_source_path(url)
+        url_hash = _url_hash(url)
+
+        if not path.exists():
+            return False
+
+        path.unlink()
+
+        # Update registry index
+        index = self._load_registry_index()
+        if url_hash in index:
+            del index[url_hash]
+            self._save_registry_index(index)
+
+        return True
+
+    def source_exists(self, url: str) -> bool:
+        """Check if a source is already registered."""
+        return self._get_source_path(url).exists()
+
+    def get_all_urls(self) -> List[str]:
+        """Get all registered source URLs."""
+        index = self._load_registry_index()
+        return list(index.values())
+
