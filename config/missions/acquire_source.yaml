@@ -1,0 +1,70 @@
+# Mission to acquire content from approved sources.
+
+id: acquire_source
+version: 1
+metadata:
+  owner: copilot-orchestrator
+  created_at: 2025-12-28
+  summary_tooling: source-acquisition
+
+goal: |
+  Acquire content from a source URL and store it in the evidence directory.
+  
+  Triggered by:
+  1. Issues with `initial-acquisition` label
+  2. Issues with `content-update` label
+  
+  This mission handles the actual content fetching and storage for registered sources.
+  It works in conjunction with the Monitor Agent, which creates these issues when
+  sources need acquisition (initial or update).
+  
+  Workflow steps:
+  1. Call `get_issue_details` to read the Issue and extract:
+     - Source URL (from issue body, look for "Source URL:" line)
+     - Source name (from issue title or body)
+  2. Call `acquire_source_content` with the source URL
+     - This fetches, parses, and stores the content in evidence/parsed/
+     - Automatically updates the source registry with content hash and timestamp
+  3. Call `post_comment` with acquisition summary
+     - Include: checksum, parser used, artifact path, any warnings
+  4. Call `close_issue` to mark acquisition complete
+  
+  For initial acquisitions:
+  - The source will have last_content_hash = None before acquisition
+  - After successful acquisition, last_content_hash will be set
+  
+  For content updates:
+  - The source already has a last_content_hash
+  - The new hash will replace the old one if content changed
+
+constraints:
+  - "MUST use acquire_source_content tool - handles parsing and registry updates"
+  - "Do NOT manually parse or update registry - let the tool handle it"
+  - "Verify the source exists in registry before attempting acquisition"
+  - "Handle network failures gracefully and report in Issue comment"
+  - "Close Issue only after successful acquisition or permanent failure"
+  - "If acquisition fails due to network error, leave Issue open for retry"
+
+success_criteria:
+  - Content is parsed and stored in evidence/parsed/ directory
+  - Source registry is updated with content hash and timestamp
+  - Acquisition metadata (checksum, artifact_path) is recorded
+  - Issue is closed with detailed acquisition summary
+  - Any warnings from parser are documented in Issue comment
+
+max_steps: 10
+allowed_tools:
+  # GitHub tools
+  - get_issue_details
+  - get_issue_comments
+  - post_comment
+  - close_issue
+  
+  # Source registry tools
+  - get_source
+  - list_sources
+  
+  # Acquisition tools
+  - acquire_source_content
+  
+requires_approval: false
