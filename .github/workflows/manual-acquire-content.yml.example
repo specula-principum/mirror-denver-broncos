@@ -1,0 +1,60 @@
+name: Acquire Content (Manual)
+
+# This workflow can be triggered manually to acquire content from approved sources.
+# Use this to work around network limitations in the Copilot Agent sandbox.
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: 'Source URL to acquire (must be in registry)'
+        required: true
+        default: 'https://www.denverbroncos.com'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  acquire:
+    name: Acquire and Parse Content
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Acquire content
+        run: python scripts/acquire_denver_broncos.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+      
+      - name: Display results
+        if: always()
+        run: |
+          echo "Content acquisition complete!"
+          echo "Check the workflow logs above for details."
+          
+          # Show what was created
+          if [ -d "evidence/parsed" ]; then
+            echo "Parsed content:"
+            find evidence/parsed -type f -name "*.md" | head -10
+          fi
+          
+          if [ -f "evidence/parsed/manifest.json" ]; then
+            echo ""
+            echo "Manifest updated:"
+            tail -20 evidence/parsed/manifest.json
+          fi
