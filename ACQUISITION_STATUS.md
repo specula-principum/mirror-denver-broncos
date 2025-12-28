@@ -71,17 +71,21 @@ The acquisition workflow has been implemented in `scripts/acquire_denver_broncos
 8. Persist all changes via GitHub API
 ```
 
-## Missing Component: MCP Tools
+## MCP Server Analysis
 
-According to the repository's agentic copilot rules, content acquisition should use MCP tools from the `evidence-acquisition` server:
-
-**Expected MCP Tools:**
+The repository DOES contain an MCP server implementation at `src/integrations/copilot/mcp_server.py` with the required functions:
 - `fetch_source_content(url)` - Fetch and extract main content as markdown with hash
 - `check_source_headers(url)` - Lightweight HEAD request for change detection
 
-**Status:** These MCP tools are NOT available in the current environment.
+However, the MCP server is NOT configured for use:
+- ❌ Missing configuration file: `.github/copilot-mcp.json`
+- ❌ MCP tools not available to Copilot agent in this session
+- ❌ Direct function calls still blocked by network restrictions
 
-**Note:** The agentic copilot rules state these tools "run outside the firewall and have unrestricted network access," which would solve the network blocking issue.
+**Why MCP Server Would Help:**
+The MCP protocol specification allows servers to run in a separate process outside the agent's firewall restrictions. When properly configured, the Copilot agent would connect to the MCP server via stdio/JSON-RPC, and the server process would have unrestricted network access.
+
+**Current Status:** The implementation exists but is not deployed/configured for this workflow.
 
 ## Recommendation
 
@@ -104,6 +108,33 @@ Per the issue instructions:
 - `ACQUISITION_STATUS.md` - This status report
 
 ## Next Steps (Future)
+
+### Option 1: Configure MCP Server (Recommended)
+
+To enable the MCP server for future acquisitions:
+
+1. Create `.github/copilot-mcp.json`:
+   ```json
+   {
+       "mcpServers": {
+           "evidence-acquisition": {
+               "command": "python",
+               "args": ["-m", "src.integrations.copilot.mcp_server"]
+           }
+       }
+   }
+   ```
+
+2. Ensure dependencies are installed:
+   ```bash
+   pip install requests trafilatura beautifulsoup4
+   ```
+
+3. The Copilot agent will then have access to these tools:
+   - `fetch_source_content(url, max_content_length)`
+   - `check_source_headers(url)`
+
+### Option 2: Manual Acquisition When Network Available
 
 When network access or MCP tools become available:
 
