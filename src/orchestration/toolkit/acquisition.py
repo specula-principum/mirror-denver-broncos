@@ -83,8 +83,9 @@ def _acquire_source_content_handler(args: Mapping[str, Any]) -> ToolResult:
     kb_root_arg = args.get("kb_root")
     kb_root = Path(kb_root_arg) if kb_root_arg else paths.get_knowledge_graph_root()
     
-    # Get source entry from registry
-    registry = SourceRegistry(root=kb_root)
+    # Get source entry from registry (with GitHub client for later saves)
+    github_client_for_registry = resolve_github_client()
+    registry = SourceRegistry(root=kb_root, github_client=github_client_for_registry)
     source = registry.get_source(url)
     
     if source is None:
@@ -137,11 +138,7 @@ def _acquire_source_content_handler(args: Mapping[str, Any]) -> ToolResult:
         })
         
         updated_source = SourceEntry.from_dict(source_dict)
-        
-        # Save with GitHub client if available
-        github_client_for_registry = resolve_github_client()
-        registry_with_client = SourceRegistry(root=kb_root, github_client=github_client_for_registry)
-        registry_with_client.save_source(updated_source)
+        registry.save_source(updated_source)
     
     # Build response
     return ToolResult(
@@ -153,7 +150,7 @@ def _acquire_source_content_handler(args: Mapping[str, Any]) -> ToolResult:
             "parser": outcome.parser,
             "checksum": outcome.checksum,
             "artifact_path": outcome.artifact_path,
-            "warnings": list(outcome.warnings) if outcome.warnings else [],
+            "warnings": list(outcome.warnings or []),
             "message": outcome.message,
             "registry_updated": outcome.checksum is not None,
         },
