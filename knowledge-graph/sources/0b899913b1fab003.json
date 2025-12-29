@@ -17,10 +17,10 @@
   "update_frequency": null,
   "topics": [],
   "notes": "Creating an initial-acquisition issue for fetching full content. The source has not been acquired yet.",
-  "last_content_hash": null,
+  "last_content_hash": "e64cd65bb537b0258fa2782c9bc19e4bde9d0d68a31480226d74d28b92d050a7",
   "last_etag": null,
   "last_modified_header": null,
-  "last_checked": null,
+  "last_checked": "2025-12-29T02:49:11.517713+00:00",
   "check_failures": 0,
   "next_check_after": null
 }
