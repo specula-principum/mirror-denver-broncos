@@ -129,6 +129,9 @@ def render_page(
             context_options["java_script_enabled"] = True
             context_options["bypass_csp"] = False
             
+            # Ignore HTTPS errors (for environments with certificate issues)
+            context_options["ignore_https_errors"] = True
+            
             context = browser.new_context(**context_options)
             page = context.new_page()
             
