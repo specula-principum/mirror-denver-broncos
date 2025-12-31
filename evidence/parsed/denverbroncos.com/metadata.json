@@ -1,0 +1,11 @@
+{
+  "source_url": "https://www.denverbroncos.com",
+  "fetched_at": "2025-12-31T01:21:47.496506+00:00",
+  "content_hash": "fef6b08d772b9f28ab145a5a39acf8a23965de83a868e557cd807d5c7d0ac2a4",
+  "parser": "web",
+  "status_code": 200,
+  "content_type": "text/html",
+  "extracted_characters": 282,
+  "segments_count": 1,
+  "rendered": true
+}

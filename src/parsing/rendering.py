@@ -92,13 +92,18 @@ def render_page(
     
     try:
         with sync_playwright() as p:
-            # Launch browser
-            browser = p.chromium.launch(headless=headless)
+            # Launch browser with args to ignore certificate errors
+            browser = p.chromium.launch(
+                headless=headless,
+                args=['--ignore-certificate-errors']
+            )
             
             # Create context with optional user agent
             context_options = {}
             if user_agent:
                 context_options["user_agent"] = user_agent
+            # Ignore HTTPS errors
+            context_options["ignore_https_errors"] = True
             
             context = browser.new_context(**context_options)
             page = context.new_page()
