@@ -1,0 +1,10 @@
+{
+  "source_url": "https://www.denverbroncos.com",
+  "timestamp": "2025-12-31T04:45:25.048640+00:00",
+  "content_hash": "64defb1e19e420f71d773ddbd7ade6859c60d7a43446f022eb434a14e39ad23c",
+  "segments_count": 1,
+  "parser_name": "web",
+  "fetched_at": "2025-12-31T04:45:23.042156+00:00",
+  "status_code": 200,
+  "final_url": "https://www.denverbroncos.com/"
+}
