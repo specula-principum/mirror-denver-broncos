@@ -1,0 +1,12 @@
+{
+  "source_url": "https://www.denverbroncos.com",
+  "domain": "denverbroncos.com",
+  "fetched_at": "2025-12-31T15:01:25.934259+00:00",
+  "content_hash": "c932d3edf6c50a832c9859d59d6974adf1e5f000ca338013e8e61fd5dc5516a6",
+  "parser": "web",
+  "status_code": 200,
+  "final_url": "https://www.denverbroncos.com/",
+  "content_type": "text/html",
+  "extracted_characters": 282,
+  "segment_count": 1
+}
