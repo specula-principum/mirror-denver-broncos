@@ -1,0 +1,30 @@
+{
+  "entries": [
+    {
+      "artifact_path": "2026/www-denverbroncos-com-177d95800e20/index.md",
+      "checksum": "177d95800e2036f60b86d6ca56da27907df9802c320a572571a31a705bed9db7",
+      "metadata": {
+        "acquired_at": "2026-01-01T19:23:40.288160+00:00",
+        "artifact_type": "page-directory",
+        "content_length": 500446,
+        "content_type": "text/html",
+        "extracted_characters": 875,
+        "fetched_at": "2026-01-01T19:23:34.884279+00:00",
+        "final_url": "https://www.denverbroncos.com/",
+        "page_unit": "segment",
+        "rendered": true,
+        "segments_total": 1,
+        "source_name": "Denver Broncos Official Website",
+        "source_type": "derived",
+        "title": "Denver Broncos",
+        "url": "https://www.denverbroncos.com",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+      },
+      "parser": "web",
+      "processed_at": "2026-01-01T19:23:39.928363+00:00",
+      "source": "https://www.denverbroncos.com",
+      "status": "completed"
+    }
+  ],
+  "version": 1
+}
