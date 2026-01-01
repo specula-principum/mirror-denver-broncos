@@ -23,7 +23,7 @@
   "last_checked": "2025-12-31T17:59:00.652287+00:00",
   "check_failures": 0,
   "next_check_after": null,
-  "is_crawlable": false,
+  "is_crawlable": true,
   "crawl_scope": "path",
   "crawl_max_pages": 10000,
   "crawl_max_depth": 10,
