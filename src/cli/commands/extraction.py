@@ -137,9 +137,8 @@ def extract_cli(args: argparse.Namespace) -> int:
             continue
         
         # Filter by checksum if specified
-        if hasattr(args, 'checksum') and args.checksum:
-            if checksum != args.checksum:
-                continue
+        if args.checksum and checksum != args.checksum:
+            continue
             
         # Check if already extracted
         if not args.force:
