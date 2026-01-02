@@ -82,6 +82,11 @@ def register_commands(subparsers: argparse._SubParsersAction[argparse.ArgumentPa
         action="store_true",
         help="Extract detailed profiles for entities.",
     )
+    parser.add_argument(
+        "--checksum",
+        type=str,
+        help="Extract from a specific document by checksum.",
+    )
     parser.set_defaults(func=extract_cli, command="extract")
 
 
@@ -128,6 +133,10 @@ def extract_cli(args: argparse.Namespace) -> int:
     candidates = []
     
     for checksum, entry in manifest.entries.items():
+        # Filter by checksum if specified
+        if args.checksum and checksum != args.checksum:
+            continue
+            
         if entry.status != "completed":
             continue
             
