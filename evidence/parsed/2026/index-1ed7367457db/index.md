@@ -1,8 +1,8 @@
 ---
-source: "https://www.denverbroncos.com/compiledassets/theming/f5887b8711fd0f93988d5438cb0927a2"
-checksum: cfaf030f33eaff806f8bb36e2df0d2ab907e711998cf590c5e4fbb9576bc1494
+source: "https://www.denverbroncos.com/community/index"
+checksum: 1ed7367457db74911e992aad0995c68ab8707cb3a1b1262cf7e2e926d2c4ecfc
 parser: web
-processed_at: "2026-01-02T01:49:01.406209+00:00"
+processed_at: "2026-01-02T01:49:47.442922+00:00"
 is_remote: true
 segment_count: 1
 status: completed

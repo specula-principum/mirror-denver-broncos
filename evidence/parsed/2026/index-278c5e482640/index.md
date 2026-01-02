@@ -1,8 +1,8 @@
 ---
-source: "https://www.denverbroncos.com/compiledassets/theming/f5887b8711fd0f93988d5438cb0927a2"
-checksum: cfaf030f33eaff806f8bb36e2df0d2ab907e711998cf590c5e4fbb9576bc1494
+source: "https://www.denverbroncos.com/audio/index"
+checksum: 278c5e482640d95f37f4416bd23573eb51ac7b2bde2b768959093a2cddb465b4
 parser: web
-processed_at: "2026-01-02T01:49:01.406209+00:00"
+processed_at: "2026-01-02T01:53:25.959148+00:00"
 is_remote: true
 segment_count: 1
 status: completed

@@ -1,8 +1,8 @@
 ---
-source: "https://www.denverbroncos.com/compiledassets/theming/f5887b8711fd0f93988d5438cb0927a2"
-checksum: cfaf030f33eaff806f8bb36e2df0d2ab907e711998cf590c5e4fbb9576bc1494
+source: "https://www.denverbroncos.com/photos/index"
+checksum: 6c8be2f32912cfd815229af12bb67e18733c32be6ef0e33bda1fb8747c94b500
 parser: web
-processed_at: "2026-01-02T01:49:01.406209+00:00"
+processed_at: "2026-01-02T01:49:30.670035+00:00"
 is_remote: true
 segment_count: 1
 status: completed
