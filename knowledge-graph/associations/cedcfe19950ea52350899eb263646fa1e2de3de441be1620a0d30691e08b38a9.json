@@ -1,0 +1,25 @@
+{
+  "source_checksum": "cedcfe19950ea52350899eb263646fa1e2de3de441be1620a0d30691e08b38a9",
+  "associations": [
+    {
+      "source": "Denver Broncos",
+      "target": "NFL",
+      "relationship": "member_of",
+      "evidence": "Broncos reputation locally and throughout the NFL",
+      "source_type": "Organization",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Empower Field at Mile High",
+      "relationship": "home_venue",
+      "evidence": "proud to represent the Denver Broncos and Empower Field at Mile High",
+      "source_type": "Organization",
+      "target_type": "Location",
+      "confidence": 1.0
+    }
+  ],
+  "extracted_at": "2026-01-02T22:08:34.248376+00:00",
+  "metadata": {}
+}
