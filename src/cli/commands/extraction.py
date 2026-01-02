@@ -82,6 +82,11 @@ def register_commands(subparsers: argparse._SubParsersAction[argparse.ArgumentPa
         action="store_true",
         help="Extract detailed profiles for entities.",
     )
+    parser.add_argument(
+        "--checksum",
+        type=str,
+        help="Extract from a specific document by checksum.",
+    )
     parser.set_defaults(func=extract_cli, command="extract")
 
 
@@ -127,27 +132,38 @@ def extract_cli(args: argparse.Namespace) -> int:
     manifest = storage.manifest()
     candidates = []
     
-    for checksum, entry in manifest.entries.items():
+    # If checksum is specified, only process that document
+    if args.checksum:
+        entry = manifest.get(args.checksum)
+        if entry is None:
+            print(f"Document with checksum {args.checksum} not found in manifest.", file=sys.stderr)
+            return 1
         if entry.status != "completed":
-            continue
-            
-        # Check if already extracted
-        if not args.force:
-            if args.extract_orgs:
-                existing = kb_storage.get_extracted_organizations(checksum)
-            elif args.concepts:
-                existing = kb_storage.get_extracted_concepts(checksum)
-            elif args.extract_associations:
-                existing = kb_storage.get_extracted_associations(checksum)
-            elif args.profiles:
-                existing = kb_storage.get_extracted_profiles(checksum)
-            else:
-                existing = kb_storage.get_extracted_people(checksum)
-                
-            if existing:
+            print(f"Document {args.checksum} has status '{entry.status}', not 'completed'.", file=sys.stderr)
+            return 1
+        candidates = [entry]
+    else:
+        for checksum, entry in manifest.entries.items():
+            if entry.status != "completed":
                 continue
                 
-        candidates.append(entry)
+            # Check if already extracted
+            if not args.force:
+                if args.extract_orgs:
+                    existing = kb_storage.get_extracted_organizations(checksum)
+                elif args.concepts:
+                    existing = kb_storage.get_extracted_concepts(checksum)
+                elif args.extract_associations:
+                    existing = kb_storage.get_extracted_associations(checksum)
+                elif args.profiles:
+                    existing = kb_storage.get_extracted_profiles(checksum)
+                else:
+                    existing = kb_storage.get_extracted_people(checksum)
+                    
+                if existing:
+                    continue
+                    
+            candidates.append(entry)
 
     if not candidates:
         print(f"No documents found needing {entity_type} extraction.")
