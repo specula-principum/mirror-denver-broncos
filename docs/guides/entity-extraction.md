@@ -50,6 +50,7 @@ python -m main extract [options]
 -   `--orgs` / `--organizations`: Extract organizations instead of people
 -   `--concepts`: Extract concepts instead of people
 -   `--associations`: Extract associations between entities (People, Organizations, Concepts)
+-   `--checksum CHECKSUM`: Only process the document with this specific checksum
 
 ### Examples
 
@@ -65,6 +66,12 @@ python -m main extract --concepts
 
 # Extract associations
 python -m main extract --associations
+
+# Extract from a specific document by checksum
+python -m main extract --checksum abc123def456...
+
+# Extract organizations from a specific document
+python -m main extract --checksum abc123def456... --orgs
 
 # Test concept extraction on first document only
 python -m main extract --concepts --limit 1
