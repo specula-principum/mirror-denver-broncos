@@ -100,8 +100,9 @@ def extract_cli(args: argparse.Namespace) -> int:
         storage = ParseStorage(config.output_root)
         
         # Get GitHub storage client if running in GitHub Actions
+        # (returns None when running locally, allowing local file writes)
         github_client = get_github_storage_client()
-        kb_storage = KnowledgeGraphStorage(args.kb_root, github_client=github_client)
+        kb_storage = KnowledgeGraphStorage(root=args.kb_root, github_client=github_client)
         
         # Initialize Copilot client
         # This will raise if token is missing
