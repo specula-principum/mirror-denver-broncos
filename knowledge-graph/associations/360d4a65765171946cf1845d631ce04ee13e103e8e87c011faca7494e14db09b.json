@@ -1,0 +1,97 @@
+{
+  "source_checksum": "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b",
+  "associations": [
+    {
+      "source": "Sean Payton",
+      "target": "Denver Broncos",
+      "relationship": "head_coach_of",
+      "evidence": "Head Coach Sean Payton",
+      "source_type": "person",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Bo Nix",
+      "target": "Denver Broncos",
+      "relationship": "player_for",
+      "evidence": "quarterback Bo Nix",
+      "source_type": "person",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Ben Powers",
+      "target": "Denver Broncos",
+      "relationship": "player_for",
+      "evidence": "Guard Ben Powers",
+      "source_type": "person",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Karene Reid",
+      "target": "Denver Broncos",
+      "relationship": "player_for",
+      "evidence": "inside linebacker Karene Reid",
+      "source_type": "person",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "John Franklin-Myers",
+      "target": "Denver Broncos",
+      "relationship": "player_for",
+      "evidence": "defensive lineman John Franklin-Myers",
+      "source_type": "person",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Marvin Mims Jr.",
+      "target": "Denver Broncos",
+      "relationship": "player_for",
+      "evidence": "wide receiver Marvin Mims Jr.",
+      "source_type": "person",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "AFC West",
+      "relationship": "member_of",
+      "evidence": "Denver is back atop the AFC West",
+      "source_type": "organization",
+      "target_type": "concept",
+      "confidence": 1.0
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Los Angeles Chargers",
+      "relationship": "opponent",
+      "evidence": "The Broncos will host the Los Angeles Chargers",
+      "source_type": "organization",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Kansas City Chiefs",
+      "relationship": "opponent",
+      "evidence": "Denver erased a halftime deficit...to capture a 20-13 Christmas victory over the Chiefs",
+      "source_type": "organization",
+      "target_type": "organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Vera Institute of Justice",
+      "target": "CDOC",
+      "relationship": "partner",
+      "evidence": "CDOC's Restoring Promise unit, a partnership with the Vera Institute of Justice",
+      "source_type": "organization",
+      "target_type": "organization",
+      "confidence": 1.0
+    }
+  ],
+  "extracted_at": "2026-01-02T21:58:43.080123+00:00",
+  "metadata": {}
+}
