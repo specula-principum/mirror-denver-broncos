@@ -22,13 +22,13 @@
     {
       "source": "Denver Broncos",
       "target": "Los Angeles Chargers",
-      "relationship": "Opposed to",
+      "relationship": "Opponent of",
       "evidence": "Broncos' Week 18 matchup vs. the Los Angeles Chargers",
       "source_type": "Organization",
       "target_type": "Organization",
       "confidence": 1.0
     }
   ],
-  "extracted_at": "2026-01-05T02:21:11.159949+00:00",
+  "extracted_at": "2026-01-05T02:46:36.811359+00:00",
   "metadata": {}
 }
