@@ -3,23 +3,41 @@
   "associations": [
     {
       "source": "Sean Payton",
-      "target": "Denver Broncos",
-      "relationship": "Head Coach of",
+      "target": "stadium noise",
+      "relationship": "Related to",
       "evidence": "\"Let's get this [stadium], when they're getting in the huddle, deafening,\" Head Coach Sean Payton said.",
       "source_type": "Person",
-      "target_type": "Organization",
-      "confidence": 1.0
+      "target_type": "Concept",
+      "confidence": 0.9
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Broncos practice",
+      "relationship": "Related to",
+      "evidence": "A pair of Broncos returned to practice Wednesday ahead of the team's regular-season finale.",
+      "source_type": "Organization",
+      "target_type": "Concept",
+      "confidence": 0.8
     },
     {
       "source": "Denver Broncos",
       "target": "Los Angeles Chargers",
-      "relationship": "Hosting",
+      "relationship": "Opposed to",
       "evidence": "The Broncos will host the Los Angeles Chargers in the 2025 regular-season finale on Sunday, Jan. 4 at 2:25 p.m. MT on CBS.",
       "source_type": "Organization",
       "target_type": "Organization",
-      "confidence": 1.0
+      "confidence": 0.9
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "CBS",
+      "relationship": "Related to",
+      "evidence": "The Broncos will host the Los Angeles Chargers in the 2025 regular-season finale on Sunday, Jan. 4 at 2:25 p.m. MT on CBS.",
+      "source_type": "Organization",
+      "target_type": "Organization",
+      "confidence": 0.8
     }
   ],
-  "extracted_at": "2026-01-05T03:19:36.814575+00:00",
+  "extracted_at": "2026-01-05T04:33:44.663018+00:00",
   "metadata": {}
 }
