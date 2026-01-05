@@ -4,22 +4,22 @@
     {
       "source": "Sean Payton",
       "target": "Denver Broncos",
-      "relationship": "Member of",
+      "relationship": "Head Coach of",
       "evidence": "\"Let's get this [stadium], when they're getting in the huddle, deafening,\" Head Coach Sean Payton said.",
       "source_type": "Person",
       "target_type": "Organization",
-      "confidence": 0.9
+      "confidence": 1.0
     },
     {
       "source": "Denver Broncos",
       "target": "Los Angeles Chargers",
-      "relationship": "Opposed to",
+      "relationship": "Hosting",
       "evidence": "The Broncos will host the Los Angeles Chargers in the 2025 regular-season finale on Sunday, Jan. 4 at 2:25 p.m. MT on CBS.",
       "source_type": "Organization",
       "target_type": "Organization",
-      "confidence": 0.8
+      "confidence": 1.0
     }
   ],
-  "extracted_at": "2026-01-05T02:46:28.968023+00:00",
+  "extracted_at": "2026-01-05T03:19:36.814575+00:00",
   "metadata": {}
 }
