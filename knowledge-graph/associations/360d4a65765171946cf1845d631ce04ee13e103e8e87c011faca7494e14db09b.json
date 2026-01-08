@@ -1,0 +1,97 @@
+{
+  "source_checksum": "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b",
+  "associations": [
+    {
+      "source": "Sean Payton",
+      "target": "Denver Broncos",
+      "relationship": "Head Coach of",
+      "evidence": "\"Head Coach Sean Payton said.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Bo Nix",
+      "target": "Denver Broncos",
+      "relationship": "Quarterback for",
+      "evidence": "\"quarterback Bo Nix said.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Marvin Mims Jr.",
+      "target": "Denver Broncos",
+      "relationship": "Wide Receiver for",
+      "evidence": "\"wide receiver Marvin Mims Jr. has earned league-wide recognition.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Ben Powers",
+      "target": "Denver Broncos",
+      "relationship": "Guard for",
+      "evidence": "\"Guard Ben Powers is officially active for Sunday's game against the Jaguars.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Karene Reid",
+      "target": "Denver Broncos",
+      "relationship": "Inside Linebacker for",
+      "evidence": "\"inside linebacker Karene Reid (hamstring) remained full participants in practice.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Marcedes Lewis",
+      "target": "Denver Broncos",
+      "relationship": "Tight End for",
+      "evidence": "\"tight end Marcedes Lewis and guard Calvin Throckmorton are active for the Broncos' Christmas matchup with the Chiefs.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Calvin Throckmorton",
+      "target": "Denver Broncos",
+      "relationship": "Guard for",
+      "evidence": "\"tight end Marcedes Lewis and guard Calvin Throckmorton are active for the Broncos' Christmas matchup with the Chiefs.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "RJ Harvey",
+      "target": "Denver Broncos",
+      "relationship": "Running Back for",
+      "evidence": "\"Running back RJ Harvey (ribs) ... was also a full participant.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Mike McGlinchey",
+      "target": "Denver Broncos",
+      "relationship": "Tackle for",
+      "evidence": "\"tackle Mike McGlinchey (neck) ... was also a full participant.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Luke Wattenberg",
+      "target": "Denver Broncos",
+      "relationship": "Center for",
+      "evidence": "\"center Luke Wattenberg (ankle) ... was also a full participant.\"",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    }
+  ],
+  "extracted_at": "2026-01-08T04:35:34.368064+00:00",
+  "metadata": {}
+}
