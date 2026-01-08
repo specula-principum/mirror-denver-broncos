@@ -1,0 +1,34 @@
+{
+  "source_checksum": "92f967d9283289aff05997af43591e229f7782b3b84f988827c5fd35e529afea",
+  "associations": [
+    {
+      "source": "Elisa Hernandez",
+      "target": "Denver Broncos",
+      "relationship": "Reporter for",
+      "evidence": "team reporter Elisa Hernandez and lead writer Aric DiLalla chat about the huge opportunity that awaits the Broncos",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Aric DiLalla",
+      "target": "Denver Broncos",
+      "relationship": "Writer for",
+      "evidence": "team reporter Elisa Hernandez and lead writer Aric DiLalla chat about the huge opportunity that awaits the Broncos",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Los Angeles Chargers",
+      "relationship": "Opponent of",
+      "evidence": "the huge opportunity that awaits the Broncos in Week 18 against the Chargers",
+      "source_type": "Organization",
+      "target_type": "Organization",
+      "confidence": 0.8
+    }
+  ],
+  "extracted_at": "2026-01-08T04:35:04.605495+00:00",
+  "metadata": {}
+}
