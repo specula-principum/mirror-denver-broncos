@@ -1,0 +1,34 @@
+{
+  "source_checksum": "b4401cf157c290fb1a247a32979cb3593421eebfc6053df19aba8fdf40ae0da2",
+  "associations": [
+    {
+      "source": "Elisa Hernandez",
+      "target": "Denver Broncos",
+      "relationship": "Reporter for",
+      "evidence": "team reporter Elisa Hernandez and lead writer Aric DiLalla discuss the Broncos' Week 16 game",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Aric DiLalla",
+      "target": "Denver Broncos",
+      "relationship": "Writer for",
+      "evidence": "team reporter Elisa Hernandez and lead writer Aric DiLalla discuss the Broncos' Week 16 game",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Kansas City Chiefs",
+      "relationship": "Opponent of",
+      "evidence": "how Denver can use the game as a reset ahead of a critical division matchup",
+      "source_type": "Organization",
+      "target_type": "Organization",
+      "confidence": 0.8
+    }
+  ],
+  "extracted_at": "2026-01-08T04:36:28.593629+00:00",
+  "metadata": {}
+}
