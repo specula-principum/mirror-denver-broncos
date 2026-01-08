@@ -5,16 +5,11 @@
     "Los Angeles Chargers",
     "Denver Broncos",
     "AFC West Standings",
-    "Win-Loss-Tie Record",
-    "Winning Percentage (PCT)",
+    "Win-Loss Record",
+    "Winning Percentage",
     "Kansas City Chiefs",
-    "Las Vegas Raiders",
-    "Game Time: 2:25 PM MST",
-    "Denver Broncos Record: 13-3",
-    "Los Angeles Chargers Record: 11-5",
-    "Kansas City Chiefs Record: 6-10",
-    "Las Vegas Raiders Record: 2-14"
+    "Las Vegas Raiders"
   ],
-  "extracted_at": "2026-01-05T04:33:23.702694+00:00",
+  "extracted_at": "2026-01-08T04:31:54.082778+00:00",
   "metadata": {}
 }
