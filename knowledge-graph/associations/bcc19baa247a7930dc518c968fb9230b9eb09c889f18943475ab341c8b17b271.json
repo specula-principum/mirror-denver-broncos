@@ -1,0 +1,16 @@
+{
+  "source_checksum": "bcc19baa247a7930dc518c968fb9230b9eb09c889f18943475ab341c8b17b271",
+  "associations": [
+    {
+      "source": "Courtland Sutton",
+      "target": "Broncos",
+      "relationship": "Member of",
+      "evidence": "Wide receiver Courtland Sutton meets the media to talk about keeping a narrow focus, the opportunity to earn the top seed in the AFC and more.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    }
+  ],
+  "extracted_at": "2026-01-08T04:36:56.843051+00:00",
+  "metadata": {}
+}

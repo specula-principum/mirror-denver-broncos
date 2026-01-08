@@ -1,0 +1,61 @@
+{
+  "source_checksum": "708064eadce1b635b616dc7fd0ac8e429ef593775e1866aaf0620e96c677bbda",
+  "associations": [
+    {
+      "source": "Pat Bryant",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "Wide receiver Pat Bryant and tight end Nate Adkins improved to full participants Thursday ahead of Denver's Week 18 game against the Chargers.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Nate Adkins",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "Wide receiver Pat Bryant and tight end Nate Adkins improved to full participants Thursday ahead of Denver's Week 18 game against the Chargers.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Ben Powers",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "Guard Ben Powers (biceps) and inside linebacker Karene Reid (hamstring) remained full participants in practice.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Karene Reid",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "Guard Ben Powers (biceps) and inside linebacker Karene Reid (hamstring) remained full participants in practice.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "John Franklin-Myers",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "Defensive lineman John Franklin-Myers (hip) remained a limited participant.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    },
+    {
+      "source": "Dre Greenlaw",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "Linebacker Dre Greenlaw (hamstring) did not practice on Thursday.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 0.9
+    }
+  ],
+  "extracted_at": "2026-01-08T04:34:56.342918+00:00",
+  "metadata": {}
+}

@@ -1,0 +1,25 @@
+{
+  "source_checksum": "3c3a44ae533c07ee77723f0919e6f7e0011e7f73b9e004214ee05fb8a43eb4f1",
+  "associations": [
+    {
+      "source": "Jorge Tinajero",
+      "target": "Broncast",
+      "relationship": "Host of",
+      "evidence": "\u00a1Acompa\u00f1a a Jorge Tinajero en el Broncast con Ricardo Saucedo como invitado especial!",
+      "source_type": "Person",
+      "target_type": "Concept",
+      "confidence": 0.9
+    },
+    {
+      "source": "Ricardo Saucedo",
+      "target": "Broncast",
+      "relationship": "Guest on",
+      "evidence": "\u00a1Acompa\u00f1a a Jorge Tinajero en el Broncast con Ricardo Saucedo como invitado especial!",
+      "source_type": "Person",
+      "target_type": "Concept",
+      "confidence": 0.9
+    }
+  ],
+  "extracted_at": "2026-01-08T04:36:40.144297+00:00",
+  "metadata": {}
+}
