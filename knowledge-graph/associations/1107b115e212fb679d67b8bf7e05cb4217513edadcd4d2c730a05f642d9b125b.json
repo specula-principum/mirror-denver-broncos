@@ -1,0 +1,52 @@
+{
+  "source_checksum": "1107b115e212fb679d67b8bf7e05cb4217513edadcd4d2c730a05f642d9b125b",
+  "associations": [
+    {
+      "source": "Sean Payton",
+      "target": "Denver Broncos",
+      "relationship": "Head Coach of",
+      "evidence": "\"It's two home games to get to where you want to go,\" Head Coach Sean Payton said Wednesday.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Mike McGlinchey",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "\"Our crowd has been one of the best in the world right now,\" tackle Mike McGlinchey said.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Courtland Sutton",
+      "target": "Denver Broncos",
+      "relationship": "Member of",
+      "evidence": "Several Broncos players said Wednesday they can tell it isn't easy for opposing players to come play in Denver, and wide receiver Courtland Sutton said getting a win against the Chargers to secure home-field advantage is critical.",
+      "source_type": "Person",
+      "target_type": "Organization",
+      "confidence": 1.0
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Empower Field at Mile High",
+      "relationship": "Home Stadium of",
+      "evidence": "A victory against the Chargers would ensure Denver receives a first-round bye and opens its playoff slate with a home game at Empower Field at Mile High.",
+      "source_type": "Organization",
+      "target_type": "Concept",
+      "confidence": 1.0
+    },
+    {
+      "source": "Denver Broncos",
+      "target": "Los Angeles Chargers",
+      "relationship": "Opponent of",
+      "evidence": "Denver will host the Chargers on Sunday looking to solidify their best home record since posting an undefeated mark in 2014.",
+      "source_type": "Organization",
+      "target_type": "Organization",
+      "confidence": 1.0
+    }
+  ],
+  "extracted_at": "2026-01-08T04:34:30.211320+00:00",
+  "metadata": {}
+}
