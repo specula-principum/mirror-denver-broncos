@@ -1,0 +1,28 @@
+{
+  "canonical_id": "joe-lombardi",
+  "canonical_name": "Joe Lombardi",
+  "entity_type": "Person",
+  "aliases": [
+    "Joe Lombardi"
+  ],
+  "source_checksums": [
+    "42a96bc9f3af856a3ffefd10abccc260a6272d5ec244b108045f44609daa9a99"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:16:15.639348+00:00",
+  "last_updated": "2026-01-09T02:16:15.639348+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:16:15.639348+00:00",
+      "by": "copilot",
+      "reasoning": "First occurrence in source 42a96bc9f3af"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "canonical_id": "jorge-tinajero",
+  "canonical_name": "Jorge Tinajero",
+  "entity_type": "Person",
+  "aliases": [
+    "Jorge Tinajero"
+  ],
+  "source_checksums": [
+    "3c3a44ae533c07ee77723f0919e6f7e0011e7f73b9e004214ee05fb8a43eb4f1"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:16:15.637217+00:00",
+  "last_updated": "2026-01-09T02:16:15.637217+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:16:15.637217+00:00",
+      "by": "copilot",
+      "reasoning": "First occurrence in source 3c3a44ae533c"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "last_updated": "2026-01-09T02:16:15.645228+00:00",
+  "by_type": {
+    "Person": {
+      "bo nix": "bo-nix",
+      "riley moss": "riley-moss",
+      "mike mcglinchey": "mike-mcglinchey",
+      "marvin mims jr.": "marvin-mims-jr",
+      "rj harvey": "rj-harvey",
+      "zach allen": "zach-allen",
+      "adam trautman": "adam-trautman",
+      "nate adkins": "nate-adkins",
+      "brandon jones": "brandon-jones",
+      "d.j. jones": "d-j-jones",
+      "ja'quan mcmillian": "ja-quan-mcmillian",
+      "jonah elliss": "jonah-elliss",
+      "jorge tinajero": "jorge-tinajero",
+      "ricardo saucedo": "ricardo-saucedo",
+      "joe lombardi": "joe-lombardi",
+      "vance joseph": "vance-joseph",
+      "darren rizzi": "darren-rizzi",
+      "sean payton": "sean-payton",
+      "pat bryant": "pat-bryant"
+    },
+    "Organization": {},
+    "Concept": {}
+  }
+}
