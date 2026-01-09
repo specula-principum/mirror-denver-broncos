@@ -1,0 +1,29 @@
+{
+  "canonical_id": "week-18",
+  "canonical_name": "Week 18",
+  "entity_type": "Concept",
+  "aliases": [
+    "Week 18"
+  ],
+  "source_checksums": [
+    "1c17939eb309aefbce0f43e9c57c9ae1c10097a0559dd3557e4222629c7bb9f1",
+    "22f13f6a1e57b6882796c973d623744e11e60f3c869041f174c35f668a56746c"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T03:19:28.317563+00:00",
+  "last_updated": "2026-01-09T03:19:28.317563+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:19:28.317563+00:00",
+      "by": "copilot",
+      "reasoning": "First occurrence in source 1c17939eb309"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

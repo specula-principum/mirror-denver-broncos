@@ -1,0 +1,28 @@
+{
+  "canonical_id": "2025-nfl-playoffs",
+  "canonical_name": "2025 NFL Playoffs",
+  "entity_type": "Concept",
+  "aliases": [
+    "2025 NFL Playoffs"
+  ],
+  "source_checksums": [
+    "1c17939eb309aefbce0f43e9c57c9ae1c10097a0559dd3557e4222629c7bb9f1"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T03:19:28.317563+00:00",
+  "last_updated": "2026-01-09T03:19:28.317563+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:19:28.317563+00:00",
+      "by": "copilot",
+      "reasoning": "First occurrence in source 1c17939eb309"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

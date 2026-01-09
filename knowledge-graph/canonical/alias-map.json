@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-01-09T02:16:15.645228+00:00",
+  "last_updated": "2026-01-09T03:19:28.335992+00:00",
   "by_type": {
     "Person": {
       "bo nix": "bo-nix",
@@ -21,9 +21,48 @@
       "vance joseph": "vance-joseph",
       "darren rizzi": "darren-rizzi",
       "sean payton": "sean-payton",
-      "pat bryant": "pat-bryant"
+      "pat bryant": "pat-bryant",
+      "courtland sutton": "courtland-sutton",
+      "alex singleton": "alex-singleton",
+      "aric dilalla": "aric-dilalla"
     },
     "Organization": {},
-    "Concept": {}
+    "Concept": {
+      "denver broncos": "denver-broncos",
+      "super bowl lx": "super-bowl-lx",
+      "afc no. 1 seed": "afc-no-1-seed",
+      "empower field at mile high": "empower-field-at-mile-high",
+      "home-field advantage": "home-field-advantage",
+      "divisional round": "divisional-round",
+      "afc championship game": "afc-championship-game",
+      "nfl stadium noise": "nfl-stadium-noise",
+      "green bay packers matchup": "green-bay-packers-matchup",
+      "denver broncos fan impact": "denver-broncos-fan-impact",
+      "playoff path": "playoff-path",
+      "franchise history": "franchise-history",
+      "three-game skid to los angeles": "three-game-skid-to-los-angeles",
+      "broncos in 60": "broncos-in-60",
+      "team mindset": "team-mindset",
+      "week 18 matchup": "week-18-matchup",
+      "los angeles chargers": "los-angeles-chargers",
+      "playoffs": "playoffs",
+      "altitude advantage": "altitude-advantage",
+      "kansas city chiefs": "kansas-city-chiefs",
+      "20-13 win": "20-13-win",
+      "apple podcasts": "apple-podcasts",
+      "spotify": "spotify",
+      "tunein": "tunein",
+      "stitcher": "stitcher",
+      "podcast subscription": "podcast-subscription",
+      "2025 nfl playoffs": "2025-nfl-playoffs",
+      "postseason home games": "postseason-home-games",
+      "week 18": "week-18",
+      "afc wild card playoff game": "afc-wild-card-playoff-game",
+      "afc divisional playoff game": "afc-divisional-playoff-game",
+      "ticket refunds": "ticket-refunds",
+      "nfl": "nfl",
+      "first-round bye": "first-round-bye",
+      "den win": "den-win"
+    }
   }
 }
