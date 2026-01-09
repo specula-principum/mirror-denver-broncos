@@ -1,0 +1,28 @@
+{
+  "canonical_id": "altitude-advantage",
+  "canonical_name": "Altitude Advantage",
+  "entity_type": "Organization",
+  "aliases": [
+    "Altitude Advantage"
+  ],
+  "source_checksums": [
+    "b4401cf157c290fb1a247a32979cb3593421eebfc6053df19aba8fdf40ae0da2"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Denver Broncos altitude training program"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

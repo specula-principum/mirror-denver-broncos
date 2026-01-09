@@ -1,0 +1,44 @@
+{
+  "canonical_id": "kansas-city-chiefs",
+  "canonical_name": "Kansas City Chiefs",
+  "entity_type": "Organization",
+  "aliases": [
+    "Kansas City Chiefs",
+    "Chiefs"
+  ],
+  "source_checksums": [
+    "be49f7db8f7e4988793508338a7efeb5baaf2a7c26dab06f678e6ddc08de2fd6",
+    "a5b33619109a6c650e938a8a1b9d2a974f44747fece83f157ca8738a6d5461a2",
+    "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b",
+    "f72614c00061d3c7bbf224092097043abf1184dac516cbafd2a017dc91442ccb",
+    "b4401cf157c290fb1a247a32979cb3593421eebfc6053df19aba8fdf40ae0da2",
+    "9918332d645a59079c29a6ea6c1d83de7a7921b2c3674e2f2a397c6a1f19139d",
+    "b7470b37e1a61962ff21ad7659de8fb6be9832ac1a96a4edfcbf3d386e61f5b3",
+    "11b44b39df7690e237ff543cc68aafa1ca5d35419f8525b530ae7644dfaa9334",
+    "708064eadce1b635b616dc7fd0ac8e429ef593775e1866aaf0620e96c677bbda"
+  ],
+  "corroboration_score": 9,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "NFL franchise"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Added alias 'Chiefs' - Short name variant of Kansas City Chiefs",
+      "alias": "Chiefs"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

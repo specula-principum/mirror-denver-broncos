@@ -1,0 +1,28 @@
+{
+  "canonical_id": "fox-sports",
+  "canonical_name": "FOX Sports",
+  "entity_type": "Organization",
+  "aliases": [
+    "FOX Sports"
+  ],
+  "source_checksums": [
+    "d777b8628de2ea350bd4b6ab05fb09c73516c383139d24c068a6453146f534f5"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Sports television network"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

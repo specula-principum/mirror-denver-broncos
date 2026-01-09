@@ -1,0 +1,58 @@
+{
+  "canonical_id": "los-angeles-chargers",
+  "canonical_name": "Los Angeles Chargers",
+  "entity_type": "Organization",
+  "aliases": [
+    "Los Angeles Chargers",
+    "Chargers"
+  ],
+  "source_checksums": [
+    "be49f7db8f7e4988793508338a7efeb5baaf2a7c26dab06f678e6ddc08de2fd6",
+    "1107b115e212fb679d67b8bf7e05cb4217513edadcd4d2c730a05f642d9b125b",
+    "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b",
+    "f72614c00061d3c7bbf224092097043abf1184dac516cbafd2a017dc91442ccb",
+    "42a4d80f81eb660ad6e56bd967bbbc415c95d5ad9ef902b4357b961f42636e3b",
+    "8706a743c7e389daad160306dd3ea9f1bb81c14622c4e6c851b386ac8b7992db",
+    "11803b12d19e9dc0310b44c4dcc0af774f7af29eb758b417d287867a771efac0",
+    "d12c8ba21ea8ebc0275092f1ff7303b2c1b298e6a13001293bfecc4b79c763e6",
+    "306e3f3d8837772b93c31848a59f1048ab5b29efd416ded4e62305cb1f9f22e1",
+    "ef86262cc8da145d6ad5c18f2f2daddb6d93903ba0425b0569461d67e5a24208",
+    "b7470b37e1a61962ff21ad7659de8fb6be9832ac1a96a4edfcbf3d386e61f5b3",
+    "d0ec35ea9f171fa55fa1f80b122b7bf63a9e6ce1d2accc57c6f2344362821043",
+    "e3175c13ee6849484fe4b76692968544b71b5536cc0b2a9604b1f9c103acb4a3",
+    "6489ccbf988eed6b6115bd103526aa6fd98f7622fc54cf67499823fbda8153c3",
+    "ccdf59cd6b2035622e5386ce8da2692db2ae0000563a525fae99ff059c11d6ce",
+    "8c6e6a44c8faa999853c6e17eee320d83f53e1ccbe400c06b3b2e5ad732bbc98",
+    "22f13f6a1e57b6882796c973d623744e11e60f3c869041f174c35f668a56746c",
+    "42a96bc9f3af856a3ffefd10abccc260a6272d5ec244b108045f44609daa9a99",
+    "79c3a5105005c1592d90dc315ae0b964adb3759fa1f2e66f82f897d1af4c33e7",
+    "fd27bc4beddaced71db4d1df31527dd763ec85f7389c6a70e24e10414231fec9",
+    "f1f6d35ded2c304a0061b1541c401d9825bf7a2b07cf6b8af75e921acb9ad22a",
+    "92f967d9283289aff05997af43591e229f7782b3b84f988827c5fd35e529afea",
+    "708064eadce1b635b616dc7fd0ac8e429ef593775e1866aaf0620e96c677bbda"
+  ],
+  "corroboration_score": 23,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "NFL franchise"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Added alias 'Chargers' - Short name variant of Los Angeles Chargers",
+      "alias": "Chargers"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

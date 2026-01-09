@@ -1,0 +1,37 @@
+{
+  "canonical_id": "philadelphia-eagles",
+  "canonical_name": "Philadelphia Eagles",
+  "entity_type": "Organization",
+  "aliases": [
+    "Philadelphia Eagles",
+    "Eagles"
+  ],
+  "source_checksums": [
+    "f1f6d35ded2c304a0061b1541c401d9825bf7a2b07cf6b8af75e921acb9ad22a",
+    "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Short name variant of Philadelphia Eagles"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Added alias 'Philadelphia Eagles' - NFL franchise",
+      "alias": "Philadelphia Eagles"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

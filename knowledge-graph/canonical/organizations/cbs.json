@@ -1,0 +1,34 @@
+{
+  "canonical_id": "cbs",
+  "canonical_name": "CBS",
+  "entity_type": "Organization",
+  "aliases": [
+    "CBS"
+  ],
+  "source_checksums": [
+    "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b",
+    "42a4d80f81eb660ad6e56bd967bbbc415c95d5ad9ef902b4357b961f42636e3b",
+    "d12c8ba21ea8ebc0275092f1ff7303b2c1b298e6a13001293bfecc4b79c763e6",
+    "ef86262cc8da145d6ad5c18f2f2daddb6d93903ba0425b0569461d67e5a24208",
+    "e3175c13ee6849484fe4b76692968544b71b5536cc0b2a9604b1f9c103acb4a3",
+    "6489ccbf988eed6b6115bd103526aa6fd98f7622fc54cf67499823fbda8153c3",
+    "22f13f6a1e57b6882796c973d623744e11e60f3c869041f174c35f668a56746c"
+  ],
+  "corroboration_score": 7,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "CBS Television Network"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

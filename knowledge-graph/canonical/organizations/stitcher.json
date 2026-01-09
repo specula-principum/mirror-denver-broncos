@@ -1,0 +1,32 @@
+{
+  "canonical_id": "stitcher",
+  "canonical_name": "Stitcher",
+  "entity_type": "Organization",
+  "aliases": [
+    "Stitcher"
+  ],
+  "source_checksums": [
+    "7bd4968b80c018a46ccdfcaa1e6ed1b09d9deb22361ec9e537132dd461b19520",
+    "92f967d9283289aff05997af43591e229f7782b3b84f988827c5fd35e529afea",
+    "b4401cf157c290fb1a247a32979cb3593421eebfc6053df19aba8fdf40ae0da2",
+    "9918332d645a59079c29a6ea6c1d83de7a7921b2c3674e2f2a397c6a1f19139d",
+    "11b44b39df7690e237ff543cc68aafa1ca5d35419f8525b530ae7644dfaa9334"
+  ],
+  "corroboration_score": 5,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Podcast aggregator"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

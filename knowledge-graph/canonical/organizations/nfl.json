@@ -1,0 +1,43 @@
+{
+  "canonical_id": "nfl",
+  "canonical_name": "NFL",
+  "entity_type": "Organization",
+  "aliases": [
+    "NFL",
+    "NFL+"
+  ],
+  "source_checksums": [
+    "1107b115e212fb679d67b8bf7e05cb4217513edadcd4d2c730a05f642d9b125b",
+    "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b",
+    "42a4d80f81eb660ad6e56bd967bbbc415c95d5ad9ef902b4357b961f42636e3b",
+    "1c17939eb309aefbce0f43e9c57c9ae1c10097a0559dd3557e4222629c7bb9f1",
+    "ef86262cc8da145d6ad5c18f2f2daddb6d93903ba0425b0569461d67e5a24208",
+    "d4d70945a6f027d4a0310929efce8e4740f22f22f846e38e504f30e7435d8e7a",
+    "e3175c13ee6849484fe4b76692968544b71b5536cc0b2a9604b1f9c103acb4a3",
+    "22f13f6a1e57b6882796c973d623744e11e60f3c869041f174c35f668a56746c"
+  ],
+  "corroboration_score": 8,
+  "first_seen": "2026-01-09T02:24:55.128737+00:00",
+  "last_updated": "2026-01-09T02:24:55.128737+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "National Football League"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T02:24:55.128737+00:00",
+      "by": "copilot",
+      "reasoning": "Added alias 'NFL+' - NFL streaming service",
+      "alias": "NFL+"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}
