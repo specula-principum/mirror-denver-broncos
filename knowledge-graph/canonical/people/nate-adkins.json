@@ -1,0 +1,28 @@
+{
+  "canonical_id": "nate-adkins",
+  "canonical_name": "Nate Adkins",
+  "entity_type": "Person",
+  "aliases": [
+    "Nate Adkins"
+  ],
+  "source_checksums": [
+    "f72614c00061d3c7bbf224092097043abf1184dac516cbafd2a017dc91442ccb"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:16:38.750253+00:00",
+  "last_updated": "2026-01-09T02:16:38.750253+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:16:38.750253+00:00",
+      "by": "copilot",
+      "reasoning": "New entity extracted from 1 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "last_updated": "2026-01-09T02:16:38.757095+00:00",
+  "by_type": {
+    "Person": {
+      "larry kahn": "larry-kahn",
+      "marvin lewis": "marvin-lewis",
+      "sean payton": "sean-payton",
+      "alex singleton": "alex-singleton",
+      "nate adkins": "nate-adkins",
+      "pat bryant": "pat-bryant",
+      "karene reid": "karene-reid",
+      "ben powers": "ben-powers",
+      "john franklin-myers": "john-franklin-myers",
+      "dre greenlaw": "dre-greenlaw"
+    },
+    "Organization": {},
+    "Concept": {}
+  }
+}
