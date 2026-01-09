@@ -6,17 +6,26 @@
     "Sean Payton"
   ],
   "source_checksums": [
-    "6489ccbf988eed6b6115bd103526aa6fd98f7622fc54cf67499823fbda8153c3"
+    "1107b115e212fb679d67b8bf7e05cb4217513edadcd4d2c730a05f642d9b125b",
+    "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b",
+    "6489ccbf988eed6b6115bd103526aa6fd98f7622fc54cf67499823fbda8153c3",
+    "8706a743c7e389daad160306dd3ea9f1bb81c14622c4e6c851b386ac8b7992db"
   ],
-  "corroboration_score": 1,
+  "corroboration_score": 4,
   "first_seen": "2026-01-09T02:16:15.642880+00:00",
-  "last_updated": "2026-01-09T02:16:15.642880+00:00",
+  "last_updated": "2026-01-09T03:10:28.463581+00:00",
   "resolution_history": [
     {
       "action": "created",
       "timestamp": "2026-01-09T02:16:15.642880+00:00",
       "by": "copilot",
       "reasoning": "First occurrence in source 6489ccbf988e"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T03:10:28.463581+00:00",
+      "by": "copilot",
+      "reasoning": "Added 0 alias(es) from batch resolution"
     }
   ],
   "attributes": {},
