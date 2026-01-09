@@ -1,0 +1,29 @@
+{
+  "canonical_id": "afc-west",
+  "canonical_name": "AFC West",
+  "entity_type": "Organization",
+  "aliases": [
+    "AFC West"
+  ],
+  "source_checksums": [
+    "b7470b37e1a61962ff21ad7659de8fb6be9832ac1a96a4edfcbf3d386e61f5b3"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T03:09:11.135872+00:00",
+  "last_updated": "2026-01-09T03:09:11.135872+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.135872+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 1 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

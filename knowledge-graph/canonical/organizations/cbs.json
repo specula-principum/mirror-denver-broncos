@@ -1,0 +1,29 @@
+{
+  "canonical_id": "cbs",
+  "canonical_name": "CBS",
+  "entity_type": "Organization",
+  "aliases": [
+    "CBS"
+  ],
+  "source_checksums": [
+    "d12c8ba21ea8ebc0275092f1ff7303b2c1b298e6a13001293bfecc4b79c763e6"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T03:09:11.136339+00:00",
+  "last_updated": "2026-01-09T03:09:11.136339+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.136339+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 1 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "canonical_id": "youtube",
+  "canonical_name": "YouTube",
+  "entity_type": "Organization",
+  "aliases": [
+    "YouTube"
+  ],
+  "source_checksums": [
+    "9918332d645a59079c29a6ea6c1d83de7a7921b2c3674e2f2a397c6a1f19139d",
+    "b4401cf157c290fb1a247a32979cb3593421eebfc6053df19aba8fdf40ae0da2",
+    "d777b8628de2ea350bd4b6ab05fb09c73516c383139d24c068a6453146f534f5"
+  ],
+  "corroboration_score": 3,
+  "first_seen": "2026-01-09T03:09:11.140181+00:00",
+  "last_updated": "2026-01-09T03:09:11.140181+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.140181+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 3 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

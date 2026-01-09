@@ -1,0 +1,31 @@
+{
+  "canonical_id": "las-vegas-raiders",
+  "canonical_name": "Las Vegas Raiders",
+  "entity_type": "Organization",
+  "aliases": [
+    "Las Vegas Raiders"
+  ],
+  "source_checksums": [
+    "b7470b37e1a61962ff21ad7659de8fb6be9832ac1a96a4edfcbf3d386e61f5b3",
+    "be49f7db8f7e4988793508338a7efeb5baaf2a7c26dab06f678e6ddc08de2fd6",
+    "d12c8ba21ea8ebc0275092f1ff7303b2c1b298e6a13001293bfecc4b79c763e6"
+  ],
+  "corroboration_score": 3,
+  "first_seen": "2026-01-09T03:09:11.137793+00:00",
+  "last_updated": "2026-01-09T03:09:11.137793+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.137793+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 3 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

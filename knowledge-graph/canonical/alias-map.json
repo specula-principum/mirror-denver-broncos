@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-01-09T02:16:15.645228+00:00",
+  "last_updated": "2026-01-09T03:09:11.140826+00:00",
   "by_type": {
     "Person": {
       "bo nix": "bo-nix",
@@ -23,7 +23,33 @@
       "sean payton": "sean-payton",
       "pat bryant": "pat-bryant"
     },
-    "Organization": {},
+    "Organization": {
+      "afc": "afc",
+      "afc west": "afc-west",
+      "altitude advantage": "altitude-advantage",
+      "apple podcasts": "apple-podcasts",
+      "cbs": "cbs",
+      "cincinnati bengals": "cincinnati-bengals",
+      "dallas cowboys": "dallas-cowboys",
+      "denver broncos": "denver-broncos",
+      "fox sports": "fox-sports",
+      "jaguars": "jaguars",
+      "kansas city chiefs": "kansas-city-chiefs",
+      "las vegas raiders": "las-vegas-raiders",
+      "los angeles chargers": "los-angeles-chargers",
+      "nbc sports": "nbc-sports",
+      "nfl": "nfl",
+      "nfl network": "nfl-network",
+      "nfl red zone": "nfl-red-zone",
+      "nfl sunday ticket": "nfl-sunday-ticket",
+      "paramount +": "paramount",
+      "spotify": "spotify",
+      "stitcher": "stitcher",
+      "tunein": "tunein",
+      "youtube": "youtube",
+      "youtube tv": "youtube-tv",
+      "denverbroncos.com": "denverbroncos-com"
+    },
     "Concept": {}
   }
 }

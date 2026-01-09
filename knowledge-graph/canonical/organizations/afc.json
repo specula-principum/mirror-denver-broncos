@@ -1,0 +1,30 @@
+{
+  "canonical_id": "afc",
+  "canonical_name": "AFC",
+  "entity_type": "Organization",
+  "aliases": [
+    "AFC"
+  ],
+  "source_checksums": [
+    "bcc19baa247a7930dc518c968fb9230b9eb09c889f18943475ab341c8b17b271",
+    "d12c8ba21ea8ebc0275092f1ff7303b2c1b298e6a13001293bfecc4b79c763e6"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T03:09:11.135655+00:00",
+  "last_updated": "2026-01-09T03:09:11.135655+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.135655+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 2 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

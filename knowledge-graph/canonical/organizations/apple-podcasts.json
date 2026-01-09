@@ -1,0 +1,30 @@
+{
+  "canonical_id": "apple-podcasts",
+  "canonical_name": "Apple Podcasts",
+  "entity_type": "Organization",
+  "aliases": [
+    "Apple Podcasts"
+  ],
+  "source_checksums": [
+    "9918332d645a59079c29a6ea6c1d83de7a7921b2c3674e2f2a397c6a1f19139d",
+    "b4401cf157c290fb1a247a32979cb3593421eebfc6053df19aba8fdf40ae0da2"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T03:09:11.136193+00:00",
+  "last_updated": "2026-01-09T03:09:11.136193+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.136193+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 2 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

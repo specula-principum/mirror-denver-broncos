@@ -1,0 +1,38 @@
+{
+  "canonical_id": "denver-broncos",
+  "canonical_name": "Denver Broncos",
+  "entity_type": "Organization",
+  "aliases": [
+    "Denver Broncos"
+  ],
+  "source_checksums": [
+    "a5b33619109a6c650e938a8a1b9d2a974f44747fece83f157ca8738a6d5461a2",
+    "b4401cf157c290fb1a247a32979cb3593421eebfc6053df19aba8fdf40ae0da2",
+    "b7470b37e1a61962ff21ad7659de8fb6be9832ac1a96a4edfcbf3d386e61f5b3",
+    "bcc19baa247a7930dc518c968fb9230b9eb09c889f18943475ab341c8b17b271",
+    "be49f7db8f7e4988793508338a7efeb5baaf2a7c26dab06f678e6ddc08de2fd6",
+    "c5a5ddf6f2f81032487cf017d443486dd9d7fb7e21e7da815b4370555fb8c205",
+    "ccdf59cd6b2035622e5386ce8da2692db2ae0000563a525fae99ff059c11d6ce",
+    "d0ec35ea9f171fa55fa1f80b122b7bf63a9e6ce1d2accc57c6f2344362821043",
+    "d12c8ba21ea8ebc0275092f1ff7303b2c1b298e6a13001293bfecc4b79c763e6",
+    "d4d70945a6f027d4a0310929efce8e4740f22f22f846e38e504f30e7435d8e7a"
+  ],
+  "corroboration_score": 10,
+  "first_seen": "2026-01-09T03:09:11.136908+00:00",
+  "last_updated": "2026-01-09T03:09:11.136908+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.136908+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 10 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

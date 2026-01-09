@@ -1,0 +1,29 @@
+{
+  "canonical_id": "paramount",
+  "canonical_name": "Paramount +",
+  "entity_type": "Organization",
+  "aliases": [
+    "Paramount +"
+  ],
+  "source_checksums": [
+    "d777b8628de2ea350bd4b6ab05fb09c73516c383139d24c068a6453146f534f5"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T03:09:11.139355+00:00",
+  "last_updated": "2026-01-09T03:09:11.139355+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:11.139355+00:00",
+      "issue_number": null,
+      "by": "copilot",
+      "reasoning": "New organization entity identified from 1 source(s)"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}
