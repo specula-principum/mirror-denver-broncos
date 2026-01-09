@@ -1,0 +1,35 @@
+{
+  "canonical_id": "nfl",
+  "canonical_name": "NFL",
+  "entity_type": "Organization",
+  "aliases": [
+    "NFL"
+  ],
+  "source_checksums": [
+    "42a4d80f81eb660ad6e56bd967bbbc415c95d5ad9ef902b4357b961f42636e3b"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T03:09:16.198069+00:00",
+  "last_updated": "2026-01-09T03:10:08.109848+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "National Football League - professional football league"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "National Football League - professional football league",
+      "alias": "NFL"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

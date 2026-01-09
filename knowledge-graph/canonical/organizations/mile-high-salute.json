@@ -1,0 +1,35 @@
+{
+  "canonical_id": "mile-high-salute",
+  "canonical_name": "Mile High Salute",
+  "entity_type": "Organization",
+  "aliases": [
+    "Mile High Salute"
+  ],
+  "source_checksums": [
+    "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T03:09:16.198069+00:00",
+  "last_updated": "2026-01-09T03:10:08.109848+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "Denver Broncos community program honoring military"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "Denver Broncos community program honoring military",
+      "alias": "Mile High Salute"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

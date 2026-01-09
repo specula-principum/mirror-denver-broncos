@@ -1,0 +1,36 @@
+{
+  "canonical_id": "cbs",
+  "canonical_name": "CBS",
+  "entity_type": "Organization",
+  "aliases": [
+    "CBS"
+  ],
+  "source_checksums": [
+    "42a4d80f81eb660ad6e56bd967bbbc415c95d5ad9ef902b4357b961f42636e3b",
+    "6489ccbf988eed6b6115bd103526aa6fd98f7622fc54cf67499823fbda8153c3"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T03:09:16.198069+00:00",
+  "last_updated": "2026-01-09T03:10:08.109848+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "Television network broadcasting NFL games"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "Television network broadcasting NFL games",
+      "alias": "CBS"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

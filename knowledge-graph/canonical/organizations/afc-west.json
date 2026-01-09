@@ -1,0 +1,36 @@
+{
+  "canonical_id": "afc-west",
+  "canonical_name": "AFC West",
+  "entity_type": "Organization",
+  "aliases": [
+    "AFC West"
+  ],
+  "source_checksums": [
+    "42a4d80f81eb660ad6e56bd967bbbc415c95d5ad9ef902b4357b961f42636e3b",
+    "7bd4968b80c018a46ccdfcaa1e6ed1b09d9deb22361ec9e537132dd461b19520"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T03:09:16.198069+00:00",
+  "last_updated": "2026-01-09T03:10:08.109848+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "NFL division containing Denver Broncos"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "NFL division containing Denver Broncos",
+      "alias": "AFC West"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

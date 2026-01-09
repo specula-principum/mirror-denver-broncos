@@ -1,0 +1,36 @@
+{
+  "canonical_id": "tunein",
+  "canonical_name": "TuneIn",
+  "entity_type": "Organization",
+  "aliases": [
+    "TuneIn"
+  ],
+  "source_checksums": [
+    "7bd4968b80c018a46ccdfcaa1e6ed1b09d9deb22361ec9e537132dd461b19520",
+    "92f967d9283289aff05997af43591e229f7782b3b84f988827c5fd35e529afea"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T03:09:16.198069+00:00",
+  "last_updated": "2026-01-09T03:10:08.109848+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "Radio and podcast streaming service"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T03:09:16.198069+00:00",
+      "by": "copilot",
+      "reasoning": "Radio and podcast streaming service",
+      "alias": "TuneIn"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

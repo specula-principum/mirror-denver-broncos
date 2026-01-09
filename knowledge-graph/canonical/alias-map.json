@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-01-09T02:16:15.645228+00:00",
+  "last_updated": "2026-01-09T03:10:08.125966+00:00",
   "by_type": {
     "Person": {
       "bo nix": "bo-nix",
@@ -23,7 +23,32 @@
       "sean payton": "sean-payton",
       "pat bryant": "pat-bryant"
     },
-    "Organization": {},
+    "Organization": {
+      "mile high salute": "mile-high-salute",
+      "denver broncos": "denver-broncos",
+      "jacksonville jaguars": "jacksonville-jaguars",
+      "los angeles chargers": "los-angeles-chargers",
+      "cbs": "cbs",
+      "nfl": "nfl",
+      "afc west": "afc-west",
+      "chargers": "los-angeles-chargers",
+      "chiefs": "kansas-city-chiefs",
+      "apple podcasts": "apple-podcasts",
+      "spotify": "spotify",
+      "tunein": "tunein",
+      "stitcher": "stitcher",
+      "youtube": "youtube",
+      "denver broncos team store": "denver-broncos-team-store",
+      "pro shop": "denver-broncos-team-store",
+      "denver broncos cheerleaders": "denver-broncos-cheerleaders",
+      "denver broncos foundation": "denver-broncos-foundation",
+      "ent credit union": "ent-credit-union",
+      "manual high school": "manual-high-school",
+      "commonspirit st. anthony hospital": "commonspirit-st-anthony-hospital",
+      "denver broncos boys & girls club": "denver-broncos-boys-girls-club",
+      "king soopers marketplace": "king-soopers-marketplace",
+      "kansas city chiefs": "kansas-city-chiefs"
+    },
     "Concept": {}
   }
 }
