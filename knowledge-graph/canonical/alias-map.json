@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-01-09T03:10:28.474447+00:00",
+  "last_updated": "2026-01-09T05:06:37.118878+00:00",
   "by_type": {
     "Person": {
       "bo nix": "bo-nix",
@@ -37,7 +37,22 @@
       "luke wattenberg": "luke-wattenberg",
       "marcedes lewis": "marcedes-lewis",
       "pat surtain": "pat-surtain",
-      "trey lance": "trey-lance"
+      "trey lance": "trey-lance",
+      "malcolm roach": "malcolm-roach",
+      "frank crum": "frank-crum",
+      "que robinson": "que-robinson",
+      "montee ball": "montee-ball",
+      "reuben droughns": "reuben-droughns",
+      "julia": "julia",
+      "sydney j": "sydney-j",
+      "jim nantz": "jim-nantz",
+      "tony romo": "tony-romo",
+      "tracy wolfson": "tracy-wolfson",
+      "dave logan": "dave-logan",
+      "rick lewis": "rick-lewis",
+      "susie wargin": "susie-wargin",
+      "larry kahn": "larry-kahn",
+      "marvin lewis": "marvin-lewis"
     },
     "Organization": {},
     "Concept": {}
