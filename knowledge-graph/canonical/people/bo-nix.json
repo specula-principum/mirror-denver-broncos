@@ -6,17 +6,25 @@
     "Bo Nix"
   ],
   "source_checksums": [
+    "2c46965fedc5dae898cbfcdbc96babdc3020dcb613c8c866df0ef485194b76ca",
+    "306e3f3d8837772b93c31848a59f1048ab5b29efd416ded4e62305cb1f9f22e1",
     "360d4a65765171946cf1845d631ce04ee13e103e8e87c011faca7494e14db09b"
   ],
-  "corroboration_score": 1,
+  "corroboration_score": 3,
   "first_seen": "2026-01-09T02:16:15.627645+00:00",
-  "last_updated": "2026-01-09T02:16:15.627645+00:00",
+  "last_updated": "2026-01-09T03:10:28.463581+00:00",
   "resolution_history": [
     {
       "action": "created",
       "timestamp": "2026-01-09T02:16:15.627645+00:00",
       "by": "copilot",
       "reasoning": "First occurrence in source 360d4a657651"
+    },
+    {
+      "action": "alias_added",
+      "timestamp": "2026-01-09T03:10:28.463581+00:00",
+      "by": "copilot",
+      "reasoning": "Added 0 alias(es) from batch resolution"
     }
   ],
   "attributes": {},

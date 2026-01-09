@@ -1,0 +1,29 @@
+{
+  "canonical_id": "trey-lance",
+  "canonical_name": "Trey Lance",
+  "entity_type": "Person",
+  "aliases": [
+    "Trey Lance"
+  ],
+  "source_checksums": [
+    "306e3f3d8837772b93c31848a59f1048ab5b29efd416ded4e62305cb1f9f22e1",
+    "79c3a5105005c1592d90dc315ae0b964adb3759fa1f2e66f82f897d1af4c33e7"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T03:10:28.463581+00:00",
+  "last_updated": "2026-01-09T03:10:28.463581+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T03:10:28.463581+00:00",
+      "by": "copilot",
+      "reasoning": "First occurrence from batch resolution"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}
