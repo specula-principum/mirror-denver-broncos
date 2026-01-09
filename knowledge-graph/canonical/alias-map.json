@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "last_updated": "2026-01-09T02:17:03.811559+00:00",
+  "by_type": {
+    "Person": {
+      "adam trautman": "adam-trautman",
+      "alex singleton": "alex-singleton",
+      "aric dilalla": "aric-dilalla",
+      "ben powers": "ben-powers",
+      "bo nix": "bo-nix",
+      "calvin throckmorton": "calvin-throckmorton",
+      "cody schrader": "cody-schrader",
+      "courtland sutton": "courtland-sutton",
+      "evan engram": "evan-engram",
+      "john franklin-myers": "john-franklin-myers",
+      "karene reid": "karene-reid",
+      "luke wattenberg": "luke-wattenberg",
+      "marcedes lewis": "marcedes-lewis",
+      "mike mcglinchey": "mike-mcglinchey",
+      "pat surtain": "pat-surtain",
+      "sean payton": "sean-payton",
+      "trey lance": "trey-lance"
+    },
+    "Organization": {},
+    "Concept": {}
+  }
+}

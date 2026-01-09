@@ -1,0 +1,29 @@
+{
+  "canonical_id": "aric-dilalla",
+  "canonical_name": "Aric DiLalla",
+  "entity_type": "Person",
+  "aliases": [
+    "Aric DiLalla"
+  ],
+  "source_checksums": [
+    "11b44b39df7690e237ff543cc68aafa1ca5d35419f8525b530ae7644dfaa9334"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:17:03.802035+00:00",
+  "last_updated": "2026-01-09T02:17:03.802035+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:17:03.802035+00:00",
+      "by": "copilot",
+      "issue_number": 755,
+      "reasoning": "First occurrence of Aric DiLalla in knowledge graph"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

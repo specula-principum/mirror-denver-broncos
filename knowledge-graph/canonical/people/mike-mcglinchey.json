@@ -1,0 +1,29 @@
+{
+  "canonical_id": "mike-mcglinchey",
+  "canonical_name": "Mike McGlinchey",
+  "entity_type": "Person",
+  "aliases": [
+    "Mike McGlinchey"
+  ],
+  "source_checksums": [
+    "1107b115e212fb679d67b8bf7e05cb4217513edadcd4d2c730a05f642d9b125b"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:17:03.802035+00:00",
+  "last_updated": "2026-01-09T02:17:03.802035+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:17:03.802035+00:00",
+      "by": "copilot",
+      "issue_number": 755,
+      "reasoning": "First occurrence of Mike McGlinchey in knowledge graph"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}

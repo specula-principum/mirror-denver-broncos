@@ -1,0 +1,30 @@
+{
+  "canonical_id": "adam-trautman",
+  "canonical_name": "Adam Trautman",
+  "entity_type": "Person",
+  "aliases": [
+    "Adam Trautman"
+  ],
+  "source_checksums": [
+    "11803b12d19e9dc0310b44c4dcc0af774f7af29eb758b417d287867a771efac0",
+    "28d5e6d8d542d36d528a8a2021d61e8dc26e73589ca9518b6c82b4698b61f994"
+  ],
+  "corroboration_score": 2,
+  "first_seen": "2026-01-09T02:17:03.802035+00:00",
+  "last_updated": "2026-01-09T02:17:03.802035+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:17:03.802035+00:00",
+      "by": "copilot",
+      "issue_number": 755,
+      "reasoning": "First occurrence of Adam Trautman in knowledge graph"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}
