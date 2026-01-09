@@ -1,0 +1,28 @@
+{
+  "canonical_id": "sean-payton",
+  "canonical_name": "Sean Payton",
+  "entity_type": "Person",
+  "aliases": [
+    "Sean Payton"
+  ],
+  "source_checksums": [
+    "6489ccbf988eed6b6115bd103526aa6fd98f7622fc54cf67499823fbda8153c3"
+  ],
+  "corroboration_score": 1,
+  "first_seen": "2026-01-09T02:16:15.642880+00:00",
+  "last_updated": "2026-01-09T02:16:15.642880+00:00",
+  "resolution_history": [
+    {
+      "action": "created",
+      "timestamp": "2026-01-09T02:16:15.642880+00:00",
+      "by": "copilot",
+      "reasoning": "First occurrence in source 6489ccbf988e"
+    }
+  ],
+  "attributes": {},
+  "associations": [],
+  "metadata": {
+    "needs_review": false,
+    "confidence": 0.95
+  }
+}
