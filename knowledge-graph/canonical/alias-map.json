@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-01-09T05:51:11.162036+00:00",
+  "last_updated": "2026-01-10T01:28:12.481902+00:00",
   "by_type": {
     "Person": {
       "bo nix": "bo-nix",
@@ -65,7 +65,23 @@
       "nfl": "nfl",
       "spotify": "spotify",
       "stitcher": "stitcher",
-      "tunein": "tunein"
+      "tunein": "tunein",
+      "afc west": "afc-west",
+      "atlanta falcons": "atlanta-falcons",
+      "cbs": "cbs",
+      "dallas cowboys": "dallas-cowboys",
+      "denver broncos foundation": "denver-broncos-foundation",
+      "ed block courage award": "ed-block-courage-award",
+      "golden eagles": "golden-eagles",
+      "indianapolis colts": "indianapolis-colts",
+      "jacksonville jaguars": "jacksonville-jaguars",
+      "las vegas raiders": "las-vegas-raiders",
+      "mile high salute": "mile-high-salute",
+      "new england patriots": "new-england-patriots",
+      "philadelphia eagles": "philadelphia-eagles",
+      "prime video": "prime-video",
+      "vera institute of justice": "vera-institute-of-justice",
+      "washington commanders": "washington-commanders"
     },
     "Concept": {}
   }
